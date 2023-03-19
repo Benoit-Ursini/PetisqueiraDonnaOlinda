@@ -9,25 +9,43 @@
   <body>
     <header>
       <img src="./images/header.jpg" alt="Foto do restaurante" />
-      <nav class="container--flex-row">
+      <nav class="menu container--flex-row">
         <a href="index.html">
-          <img src="./images/logo.jpg" alt="Logo do restaurante" />
+          <img
+            class="menu__img"
+            src="./images/logo.jpg"
+            alt="Logo do restaurante"
+          />
         </a>
-        <ul class="container--flex-row">
-          <li>
-            <a href="index.html">Home</a>
+        <ul class="menu__list container--flex-row">
+          <li class="menu__list--item">
+            <a class="menu__list--link" href="index.html">Home</a>
           </li>
-          <li>
-            <a href="./pt/menus">Menus</a>
+          <li class="menu__list--item">
+            <a class="menu__list--link" href="./pt/menus">Menus</a>
           </li>
-          <li>
-            <a href="./pt/opinion">Commentarios</a>
+          <li class="menu__list--item">
+            <a class="menu__list--link" href="./pt/opinion">Commentarios</a>
           </li>
-          <li>
-            <a href="./pt/contact">Contactos</a>
+          <li class="menu__list--item">
+            <a class="menu__list--link" href="./pt/contact">Contactos</a>
           </li>
-          <li>
-            <a href="">Linguas</a>
+          <li class="menu__list--item language">
+            Linguas
+            <ul class="language__list">
+              <li class="language__list--item">
+                <a class="language__list--link" href="">Português</a>
+              </li>
+              <li class="language__list--item">
+                <a class="language__list--link" href="">Inglês</a>
+              </li>
+              <li class="language__list--item">
+                <a class="language__list--link" href="">Francês</a>
+              </li>
+              <li class="language__list--item">
+                <a class="language__list--link" href="">Espanhol</a>
+              </li>
+            </ul>
           </li>
         </ul>
       </nav>
@@ -55,9 +73,9 @@
             </div>
           </div>
           <div>
-            <div class="timetable">
+            <div class="schedule">
               <h2>Agendar</h2>
-              <div class="timetable__container">
+              <div class="schedule__container">
                 <div>
                   Terça-feira <br />Quarta-feira <br />Quinta-feira
                   <br />Domingo
