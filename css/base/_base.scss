@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: $color2;
+}
+
+main {
+  width: 80%;
+  margin: auto;
+}
+
+section {
+  margin-top: 16px;
+  background-color: $color4;
+}
+
+h1,
+h2 {
+  text-align: center;
+  padding: 24px;
+}

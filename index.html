@@ -9,11 +9,11 @@
   <body>
     <header>
       <img src="./images/header.jpg" alt="Foto do restaurante" />
-      <nav>
+      <nav class="container--flex-row">
         <a href="index.html">
           <img src="./images/logo.jpg" alt="Logo do restaurante" />
         </a>
-        <ul>
+        <ul class="container--flex-row">
           <li>
             <a href="index.html">Home</a>
           </li>
@@ -21,10 +21,10 @@
             <a href="./pt/menus">Menus</a>
           </li>
           <li>
-            <a href="./pt/commentarios">Commentarios</a>
+            <a href="./pt/opinion">Commentarios</a>
           </li>
           <li>
-            <a href="./pt/contactos">Contactos</a>
+            <a href="./pt/contact">Contactos</a>
           </li>
           <li>
             <a href="">Linguas</a>
@@ -35,81 +35,163 @@
 
     <main>
       <section>
+        <h1>Petisqueira Donna Olinda</h1>
+      </section>
+      <section>
         <div class="container--flex-row">
-          <h1>Petisqueira Donna Olinda</h1>
           <div class="container--flex-row">
             <img
               src="./images/melhor-restaurante.jpg"
               alt="Melhor Restaurante"
             />
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Assumenda corrupti error ducimus rerum beatae distinctio
-              blanditiis facilis vitae pariatur magnam doloremque ipsam commodi
-              nemo numquam, omnis est libero quod saepe?
-            </p>
-          </div>
-          <div>
-            <h2>Agendar</h2>
-            <div class="agendar">
-              <div>
-                Terça-feira <br />Quarta-feira <br />Quinta-feira <br />Domingo
-              </div>
-              <div>10:00 até 22:00</div>
-              <div>Sexta-feira <br />Sàbado</div>
-              <div>10:00 até 22:30</div>
-              <div>Fechado às Segunda-feira</div>
+            <div>
+              <h2>Apresentação do chef</h2>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Assumenda corrupti error ducimus rerum beatae distinctio
+                blanditiis facilis vitae pariatur magnam doloremque ipsam
+                commodi nemo numquam, omnis est libero quod saepe?
+              </p>
             </div>
           </div>
           <div>
-            <h2>Contacte-nos para reservar</h2>
-            <div class="container--flex-row">
-              <img src="./images/footer/phone.svg" alt="Logo telefone" />
-              <p>(+351) 965 443 443</p>
+            <div class="timetable">
+              <h2>Agendar</h2>
+              <div class="timetable__container">
+                <div>
+                  Terça-feira <br />Quarta-feira <br />Quinta-feira
+                  <br />Domingo
+                </div>
+                <div>10:00 até 22:00</div>
+                <div>Sexta-feira <br />Sàbado</div>
+                <div>10:00 até 22:30</div>
+                <div>Fechado às Segunda-feira</div>
+              </div>
+            </div>
+            <div>
+              <h2>Contacte-nos para reservar</h2>
+              <div class="container--flex-row">
+                <img src="./images/footer/telephone.svg" alt="Logo telefone" />
+                <p>(+351) 965 443 443</p>
+              </div>
               <p>Atenção não reserva de meados de junho a meados de setembro</p>
             </div>
           </div>
         </div>
+      </section>
+      <section>
         <div>
           <h2>Nosso restaurante</h2>
           <div class="restaurante">
-            <a href="./images/home/deco1.jpg" class="restaurante__photo">
-              <img src="./images/home/deco1.jpg" alt="Intérieur vins" />
-              <div class="restaurante__photo--hover">Voir la photo</div>
+            <a
+              class="restaurante__link"
+              href="./images/home/deco1.jpg"
+              class="restaurante__photo"
+            >
+              <img
+                class="restaurante__photo"
+                src="./images/home/deco1.jpg"
+                alt="Intérieur vins"
+              />
+              <div class="restaurante__photo--hover">Clique para ver</div>
             </a>
-            <a href="./images/home/deco2.jpg" class="restaurante__photo">
-              <img src="./images/home/deco2.jpg" alt="Intérieur comptoir" />
-              <div class="restaurante__photo--hover">Voir la photo</div>
+            <a
+              class="restaurante__link"
+              href="./images/home/deco2.jpg"
+              class="restaurante__photo"
+            >
+              <img
+                class="restaurante__photo"
+                src="./images/home/deco2.jpg"
+                alt="Intérieur comptoir"
+              />
+              <div class="restaurante__photo--hover">Clique para ver</div>
             </a>
-            <a href="./images/home/deco3.jpg" class="restaurante__photo">
-              <img src="./images/home/deco3.jpg" alt="Intérieur entrée" />
-              <div class="restaurante__photo--hover">Voir la photo</div>
+            <a
+              class="restaurante__link"
+              href="./images/home/deco3.jpg"
+              class="restaurante__photo"
+            >
+              <img
+                class="restaurante__photo"
+                src="./images/home/deco3.jpg"
+                alt="Intérieur entrée"
+              />
+              <div class="restaurante__photo--hover">Clique para ver</div>
             </a>
 
-            <a href="./images/home/ext1.jpg" class="restaurante__photo">
-              <img src="./images/home/ext1.jpg" alt="Terrasse" />
-              <div class="restaurante__photo--hover">Voir la photo</div>
+            <a
+              class="restaurante__link"
+              href="./images/home/ext1.jpg"
+              class="restaurante__photo"
+            >
+              <img
+                class="restaurante__photo"
+                src="./images/home/ext1.jpg"
+                alt="Terrasse"
+              />
+              <div class="restaurante__photo--hover">Clique para ver</div>
             </a>
-            <a href="./images/home/ext2.jpg" class="restaurante__photo">
-              <img src="./images/home/ext2.jpg" alt="Terrasse" />
-              <div class="restaurante__photo--hover">Voir la photo</div>
+            <a
+              class="restaurante__link"
+              href="./images/home/ext2.jpg"
+              class="restaurante__photo"
+            >
+              <img
+                class="restaurante__photo"
+                src="./images/home/ext2.jpg"
+                alt="Terrasse"
+              />
+              <div class="restaurante__photo--hover">Clique para ver</div>
             </a>
-            <a href="./images/home/ext3.jpg" class="restaurante__photo">
-              <img src="./images/home/ext3.jpg" alt="Terrasse nuit" />
-              <div class="restaurante__photo--hover">Voir la photo</div>
+            <a
+              class="restaurante__link"
+              href="./images/home/ext3.jpg"
+              class="restaurante__photo"
+            >
+              <img
+                class="restaurante__photo"
+                src="./images/home/ext3.jpg"
+                alt="Terrasse nuit"
+              />
+              <div class="restaurante__photo--hover">Clique para ver</div>
             </a>
 
-            <a href="./images/home/int1.jpg" class="restaurante__photo">
-              <img src="./images/home/int1.jpg" alt="Intérieur tables" />
-              <div class="restaurante__photo--hover">Voir la photo</div>
+            <a
+              class="restaurante__link"
+              href="./images/home/int1.jpg"
+              class="restaurante__photo"
+            >
+              <img
+                class="restaurante__photo"
+                src="./images/home/int1.jpg"
+                alt="Intérieur tables"
+              />
+              <div class="restaurante__photo--hover">Clique para ver</div>
             </a>
-            <a href="./images/home/int2.jpg" class="restaurante__photo">
-              <img src="./images/home/int2.jpg" alt="Intérieur tables" />
-              <div class="restaurante__photo--hover">Voir la photo</div>
+            <a
+              class="restaurante__link"
+              href="./images/home/int2.jpg"
+              class="restaurante__photo"
+            >
+              <img
+                class="restaurante__photo"
+                src="./images/home/int2.jpg"
+                alt="Intérieur tables"
+              />
+              <div class="restaurante__photo--hover">Clique para ver</div>
             </a>
-            <a href="./images/home/int3.jpg" class="restaurante__photo">
-              <img src="./images/home/int3.jpg" alt="Intérieur tables" />
-              <div class="restaurante__photo--hover">Voir la photo</div>
+            <a
+              class="restaurante__link"
+              href="./images/home/int3.jpg"
+              class="restaurante__photo"
+            >
+              <img
+                class="restaurante__photo"
+                src="./images/home/int3.jpg"
+                alt="Intérieur tables"
+              />
+              <div class="restaurante__photo--hover">Clique para ver</div>
             </a>
           </div>
         </div>
@@ -118,37 +200,53 @@
 
     <footer>
       <h2>Contactos</h2>
-      <div class="container--flex-row">
-        <div class="">
+      <div class="contact">
+        <div class="container--flex-column">
           <img
-            class="__logo"
+            class="footer__logo"
             src="./images/logo.jpg"
             alt="Logo do restaurante"
           />
-          <p class="__name">Restaurante Petisqueira Donna Olinda</p>
-          <p class="__adress">
-            Rua chefe Antonio Afonso 31 Rc<br />
-            8800-636 Tavira
-          </p>
-          <p class="__phone">(+351) 965 443 443</p>
-          <p class="__email">donna.olinda8@gmail.com</p>
+          <h3 class="footer__name">Restaurante Petisqueira Donna Olinda</h3>
+          <p class="footer__adress">Rua chefe Antonio Afonso 31 Rc</p>
+          <p class="footer__adress">8800-636 Tavira</p>
+          <p class="footer__phone">(+351) 965 443 443</p>
+          <p class="footer__email">donna.olinda8@gmail.com</p>
         </div>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3181.002130035233!2d-7.656374323659623!3d37.1288643491032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd100331db76a787%3A0x775b97ade048b3e7!2sPetisqueira%20Donna%20Olinda!5e0!3m2!1sfr!2spt!4v1679065960450!5m2!1sfr!2spt"
-          width="600"
-          height="450"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
-        <a href="https://www.facebook.com/petisqueiradonnaolinda/?locale=pt_BR">
-          <img src="./images/footer/facebook.svg" alt="Logo Facebook" />
-        </a>
-        <a href="https://www.instagram.com/petisqueiradonnaolinda/?hl=fr">
-          <img src="./images/footer/instagram.svg" alt="Logo instagram" />
-        </a>
-        <img src="./images/melhor-restaurante.jpg" alt="Melhor Restaurante" />
+        <div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3181.002130035233!2d-7.656374323659623!3d37.1288643491032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd100331db76a787%3A0x775b97ade048b3e7!2sPetisqueira%20Donna%20Olinda!5e0!3m2!1sfr!2spt!4v1679065960450!5m2!1sfr!2spt"
+            width="100%"
+            height="100%"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div class="footer--container">
+          <a
+            href="https://www.facebook.com/petisqueiradonnaolinda/?locale=pt_BR"
+          >
+            <img
+              class="footer__social--image"
+              src="./images/footer/facebook.svg"
+              alt="Logo Facebook"
+            />
+          </a>
+          <a href="https://www.instagram.com/petisqueiradonnaolinda/?hl=fr">
+            <img
+              class="footer__social--image"
+              src="./images/footer/instagram.svg"
+              alt="Logo instagram"
+            />
+          </a>
+          <img
+            class="footer__image"
+            src="./images/melhor-restaurante.jpg"
+            alt="Melhor Restaurante"
+          />
+        </div>
       </div>
     </footer>
   </body>

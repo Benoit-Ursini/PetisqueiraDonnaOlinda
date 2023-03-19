@@ -1,0 +1,17 @@
+@mixin flex-row($justify: center) {
+  display: flex;
+  flex-direction: row;
+  justify-content: $justify;
+  align-items: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin border {
+  border: solid 2px black;
+}

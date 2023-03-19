@@ -1,0 +1,13 @@
+{
+  "name": "petisqueira_donna_olinda",
+  "version": "1.0.0",
+  "description": "Restaurante Petisqueira Donna Olinda, Tavira, Portugal",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./css/main.scss:./styles.css --style compressed",
+    "prefix": "postcss ./style.css --use autoprefixer -d ./css/prefixed/"
+  },
+  "author": "Benoit Ursini",
+  "license": "ISC",
+  "browserslist": "last 4 versions"
+}

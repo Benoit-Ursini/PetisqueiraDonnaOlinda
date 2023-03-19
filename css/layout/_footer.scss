@@ -1,0 +1,41 @@
+footer {
+  background-color: $color1;
+  color: $color4;
+  margin-top: 16px;
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 350px;
+  gap: 16px;
+  padding-bottom: 16px;
+}
+
+.footer {
+  text-align: center;
+  position: relative;
+
+  &__logo {
+    width: 240px;
+    height: 140px;
+    object-fit: cover;
+    margin-bottom: 16px;
+  }
+
+  &__social--image {
+    width: 64px;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &__image {
+    height: 250px;
+  }
+
+  &--container {
+    @include flex-row(space-evenly);
+  }
+}
