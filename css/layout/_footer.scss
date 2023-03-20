@@ -1,20 +1,20 @@
 footer {
-  background-color: $color1;
-  color: $color4;
-  margin-top: 16px;
+  background-color: $color-logo;
 }
 
-.contact {
+.footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 350px;
   gap: 16px;
   padding-bottom: 16px;
-}
-
-.footer {
   text-align: center;
   position: relative;
+  color: $color-section;
+
+  &__heading {
+    color: $color-section;
+  }
 
   &__logo {
     width: 240px;

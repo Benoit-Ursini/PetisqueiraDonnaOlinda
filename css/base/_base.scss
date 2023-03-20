@@ -8,7 +8,7 @@ a {
 }
 
 body {
-  background-color: $color2;
+  background-color: $color-background;
 }
 
 main {
@@ -17,12 +17,30 @@ main {
 }
 
 section {
-  margin-top: 16px;
-  background-color: $color4;
+  margin-bottom: 32px;
+  background-color: $color-section;
 }
 
 h1,
-h2 {
+h2,
+h3 {
   text-align: center;
   padding: 24px;
+  color: $color-logo;
+}
+
+h1 {
+  padding: 24px;
+}
+
+h2 {
+  padding: 24px;
+}
+
+h3 {
+  padding: 16px;
+}
+
+p {
+  font-family: "Ink Free", sans-serif;
 }

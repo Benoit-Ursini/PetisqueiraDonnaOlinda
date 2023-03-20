@@ -1,0 +1,62 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 65%;
+  margin: auto;
+  padding: 32px;
+  border-radius: 3px;
+
+  &__identity {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    &--column {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__custinput {
+    padding: 15px;
+    border-radius: 3px;
+    border: solid 2px $color-logo;
+    background-color: $color-section;
+
+    &:focus {
+      background-color: $color-logo;
+      color: $color-section;
+    }
+  }
+
+  &__label {
+    margin-bottom: 10px;
+    color: $color-title;
+  }
+
+  &__button {
+    width: 200px;
+    margin: auto;
+    margin-top: 30px;
+    background-color: $color-logo;
+    color: $color-section;
+    display: inline-block;
+    border-radius: 3px;
+    padding: 20px 30px;
+
+    &:hover {
+      background-color: $color-section;
+      border: solid 2px $color-logo;
+      color: $color-logo;
+    }
+  }
+}
+
+.contact {
+  &__text {
+    text-align: center;
+    padding: 32px;
+  }
+}

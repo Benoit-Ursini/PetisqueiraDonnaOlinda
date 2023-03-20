@@ -1,16 +1,74 @@
+.informations {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  background-color: $color-background;
+}
+
 .presentation {
+  background-color: $color-section;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    padding-bottom: 24px;
+  }
+
   &__image {
-    height: 200px;
-    object-fit: cover;
+    max-height: 350px;
+    margin-left: 64px;
+    box-shadow: 6px 6px 6px $color-title;
+  }
+
+  &__text {
+    margin: 0px 64px;
+    text-align: justify;
   }
 }
 
 .schedule {
+  border-top: solid 8px $color-logo;
+  background-color: $color-section;
+
   &__table {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 0px 8px;
-    @include border;
+    padding: 0px 8px 8px 8px;
+
+    & p {
+      margin: auto;
+      padding: 4px 0px;
+    }
+  }
+}
+
+.homecontact {
+  border-top: solid 8px $color-logo;
+  text-align: center;
+  background-color: $color-section;
+  margin-top: 32px;
+
+  &__phone {
+    padding: 8px 0px;
+    &--image {
+      height: 24px;
+    }
+    &--number {
+      padding-left: 16px;
+      padding-right: 8px;
+      font-size: 24px;
+      font-family: "Ink Free", sans-serif;
+      color: $color-text;
+    }
+  }
+
+  &__info {
+    padding: 16px 8px 16px 8px;
+    font-style: italic;
   }
 }
 
@@ -18,8 +76,12 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 300px 300px 300px;
-  gap: 16px;
-  padding: 0px 16px 16px 16px;
+  gap: 24px;
+  padding: 24px;
+
+  &__heading {
+    padding-bottom: 0px;
+  }
 
   &__link {
     position: relative;
@@ -33,6 +95,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 3px;
 
     &--hover {
       position: absolute;
@@ -43,6 +106,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      border-radius: 3px;
       font-size: 1.5em;
       color: white;
       background-color: rgba(0, 0, 0, 0.5);

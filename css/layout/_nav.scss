@@ -1,9 +1,9 @@
 .menu {
-  background-color: $color4;
+  background-color: $color-section;
   width: 100%;
   height: 144px;
-  border-top: 3px solid $color1;
-  border-bottom: 3px solid $color1;
+  border-top: 3px solid $color-logo;
+  border-bottom: 3px solid $color-logo;
 
   &__img {
     width: 240px;
@@ -25,6 +25,7 @@
       font-size: 24px;
       margin: 40px;
       text-transform: uppercase;
+      color: $color-title;
 
       &:hover:after {
         position: absolute;
@@ -33,7 +34,7 @@
         height: 3px;
         top: 100%;
         left: 0;
-        background-color: $color1;
+        background-color: $color-logo;
       }
 
       &.language {
@@ -46,7 +47,7 @@
     }
 
     &--link {
-      color: $color3;
+      color: $color-title;
     }
 
     &--item:hover .language__list {
@@ -59,25 +60,35 @@
   position: absolute;
   list-style: none;
   text-align: left;
-  background-color: $color4;
+  background-color: $color-section;
   display: none;
+  border: solid 1px $color-logo;
+  border-left: solid 3px $color-logo;
 
   &--item {
-    border-left: solid 3px $color1;
     text-transform: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 
     &:hover {
-      background-color: $color1;
+      background-color: $color-logo;
+
+      & .language__list--link {
+        color: $color-section;
+      }
     }
+  }
+
+  &--flag {
+    height: 1.2em;
+    padding-left: 4px;
   }
 
   &--link {
     display: block;
     padding: 10px 10px;
-    color: $color3;
-
-    &:hover {
-      color: $color4;
-    }
+    color: $color-title;
+    font-size: 0.8em;
   }
 }
