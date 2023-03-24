@@ -9,6 +9,9 @@ a {
 
 body {
   background-color: $color-background;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  text-align: center;
 }
 
 main {
@@ -27,20 +30,20 @@ h3 {
   text-align: center;
   padding: 24px;
   color: $color-logo;
+  font-family: "Nova Round", sans-serif;
 }
 
 h1 {
+  font-size: 2em;
   padding: 24px;
 }
 
 h2 {
+  font-size: 1.5em;
   padding: 24px;
 }
 
 h3 {
+  font-size: 1.325em;
   padding: 16px;
-}
-
-p {
-  font-family: "Ink Free", sans-serif;
 }

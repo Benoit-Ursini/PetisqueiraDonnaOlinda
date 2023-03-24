@@ -15,33 +15,40 @@
     display: flex;
     flex-direction: row;
     height: 100%;
-    padding-bottom: 24px;
   }
 
-  &__image {
-    max-height: 350px;
-    margin-left: 64px;
-    box-shadow: 6px 6px 6px $color-title;
+  &__blockimg {
+    margin: auto;
+
+    &--image {
+      max-height: 350px;
+      margin: 0px 64px;
+      box-shadow: 6px 6px 6px $color-title;
+    }
   }
 
   &__text {
-    margin: 0px 64px;
     text-align: justify;
+    margin-right: 64px;
   }
 }
 
 .schedule {
   border-top: solid 8px $color-logo;
   background-color: $color-section;
+  padding-bottom: 16px;
 
   &__table {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 0px 8px 8px 8px;
 
+    &--later {
+      color: $color-highlight;
+    }
+
     & p {
-      margin: auto;
-      padding: 4px 0px;
+      padding-top: 8px;
     }
   }
 }
@@ -53,21 +60,20 @@
   margin-top: 32px;
 
   &__phone {
+    display: block;
     padding: 8px 0px;
-    &--image {
-      height: 24px;
-    }
-    &--number {
-      padding-left: 16px;
-      padding-right: 8px;
-      font-size: 24px;
-      font-family: "Ink Free", sans-serif;
-      color: $color-text;
+    font-size: 24px;
+    color: $color-highlight;
+
+    &:hover {
+      background-color: $color-logo;
+      color: $color-section;
     }
   }
 
   &__info {
-    padding: 16px 8px 16px 8px;
+    padding: 16px;
+    font-family: Arial, Helvetica, sans-serif;
     font-style: italic;
   }
 }

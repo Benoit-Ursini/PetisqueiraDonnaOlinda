@@ -6,7 +6,16 @@
     <title>Petisqueira Donna Olinda</title>
     <link rel="shortcut icon" href="../images/logo.jpg" />
     <link rel="stylesheet" href="../styles.css" />
-    <link href="https://fonts.cdnfonts.com/css/ink-free" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nova+Round&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.cdnfonts.com/css/trebuchet-ms-2"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
@@ -83,64 +92,75 @@
     </header>
 
     <main>
-      <h1>Petisqueira Donna Olinda</h1>
-      <section class="contact">
-        <h2>Uma pergunta ? Contate-nos !</h2>
-        <form class="form" method="get" action="#">
-          <div class="form__identity">
-            <div class="form__identity--column">
-              <label class="form__label" for="name">Nome</label>
-              <input
-                class="form__custinput"
-                type="text"
-                name="name"
-                id="name"
-                placeholder="Sérgios Morais"
-                required
-              />
-            </div>
-            <div class="form__identity--column">
-              <label class="form__label" for="number">Telefone</label>
-              <input
-                class="form__custinput"
-                type="tel"
-                name="number"
-                id="number"
-                maxlength="11"
-                placeholder="965 443 443"
-                required
-              />
-            </div>
+      <h1>Uma pergunta ? Contate-nos !</h1>
+      <form class="form" onsubmit="sendEmail(); reset(); return false;">
+        <div class="form__identity">
+          <div class="form__identity--column">
+            <input
+              class="form__inputs"
+              type="text"
+              id="name"
+              placeholder="Nome"
+              required
+            />
           </div>
-          <div class="form__identity">
-            <div class="form__identity--column">
-              <label class="form__label" for="email">Email</label>
-              <input
-                class="form__custinput"
-                type="email"
-                name="email"
-                id="email"
-                placeholder="exemplo@email.com"
-                required
-              />
-            </div>
+          <div class="form__identity--column">
+            <input
+              class="form__inputs"
+              type="tel"
+              id="tel"
+              maxlength="11"
+              placeholder="Telefone"
+              required
+            />
           </div>
-          <label class="form__label" for="message">Mensagem</label>
-          <textarea
-            class="form__custinput"
-            name="message"
-            id="message"
-            rows="10"
-            placeholder="Sua mensagem ou pedido de reserva ..."
-            required
-          ></textarea>
-          <input class="form__button" type="submit" value="Enviar" />
-        </form>
-        <p class="contact__text">
-          Iremos enviar-lhe uma confirmação de reserva quando tivermos lido a
-          sua mensagem. Obrigado !
-        </p>
-      </section>
+        </div>
+        <div class="form__identity">
+          <div class="form__identity--column">
+            <input
+              class="form__inputs"
+              type="email"
+              id="email"
+              placeholder="exemplo@gmail.com"
+              required
+            />
+          </div>
+        </div>
+        <textarea
+          class="form__inputs"
+          name="message"
+          id="message"
+          rows="8"
+          placeholder="Sua mensagem"
+          required
+        ></textarea>
+        <button type="submit" class="form__button">Enviar</button>
+      </form>
+      <p class="contact__text">
+        Iremos enviar-lhe uma confirmação de reserva quando tivermos lido a sua
+        mensagem. Obrigado !
+      </p>
+      <script src="https://smtpjs.com/v3/smtp.js"></script>
+      <script>
+        function sendEmail() {
+          Email.send({
+            SecureToken: "b296a010-098a-4a0a-9ff5-e22681c30084",
+            // Host: "smtp.gamil.com",
+            // Username: "benoit.ursini@gmail.com",
+            // Password: "Sara281212!",
+            To: "benoit.ursini@gmail.com",
+            From: document.getElementById("email").value,
+            Subject: "This is the subject",
+            Body:
+              "Nome :" +
+              document.getElementById("name").value +
+              "<br> Telefone :" +
+              document.getElementById("tel").value +
+              "<br> Mensagem :" +
+              document.getElementById("message").value,
+          }).then((message) => alert("Sua mensagem foi enviada !"));
+        }
+      </script>
     </main>
 
     <footer>
@@ -155,10 +175,10 @@
           <h3 class="footer__heading">Restaurante Petisqueira Donna Olinda</h3>
           <p>Rua chefe Antonio Afonso 31 Rc</p>
           <p>8800-636 Tavira</p>
-          <a class="footer__number" href="tel:+351-965-443-443">
+          <a class="footer__link" href="tel:+351-965-443-443">
             (+351) 965 443 443
           </a>
-          <a class="footer__mail" href="mailto:donna.olinda8@gmail.com">
+          <a class="footer__link" href="mailto:donna.olinda8@gmail.com">
             donna.olinda8@gmail.com
           </a>
         </div>

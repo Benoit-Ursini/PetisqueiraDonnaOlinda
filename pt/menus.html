@@ -3,16 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="" />
-    <title>Petisqueira Donna Olinda</title>
+    <title>Petisqueira Donna Olinda - Cardápios</title>
     <link rel="shortcut icon" href="../images/logo.jpg" />
     <link rel="stylesheet" href="../styles.css" />
-    <link href="https://fonts.cdnfonts.com/css/ink-free" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nova+Round&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.cdnfonts.com/css/trebuchet-ms-2"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
     <header>
       <img src="../images/header.jpg" alt="Foto do restaurante" />
-      <nav class="menu container--flex-row">
+      <nav id="up" class="menu container--flex-row">
         <a href="../index.html">
           <img
             class="menu__img"
@@ -83,30 +92,12 @@
     </header>
 
     <main>
-      <h1>Petisqueira Donna Olinda</h1>
+      <h1>Nossos cardápios</h1>
       <section>
-        <h2>Nossos cardápios</h2>
-        <div></div>
+        <h3>Suggestion du jour</h3>
+      </section>
+      <section>
         <h2>Nossos pratos</h2>
-        <p class="dishes__text">
-          Encontre-nos no
-          <a
-            class="dishes__text--link"
-            href="https://www.facebook.com/petisqueiradonnaolinda/?locale=pt_BR"
-            target="_blank"
-          >
-            Facebook
-          </a>
-          ou
-          <a
-            class="dishes__text--link"
-            href="https://www.instagram.com/petisqueiradonnaolinda/?hl=fr"
-            target="_blank"
-          >
-            Instagram
-          </a>
-          para mais fotos !
-        </p>
         <div class="dishes">
           <img
             class="dishes__photo"
@@ -289,6 +280,12 @@
           />
         </div>
       </section>
+      <a href="#up"
+        ><img
+          class="dishes__arrow--up"
+          src="../images/dishes/arrow-up.svg"
+          alt="Arrow up"
+      /></a>
     </main>
 
     <footer>
@@ -303,10 +300,10 @@
           <h3 class="footer__heading">Restaurante Petisqueira Donna Olinda</h3>
           <p>Rua chefe Antonio Afonso 31 Rc</p>
           <p>8800-636 Tavira</p>
-          <a class="footer__number" href="tel:+351-965-443-443">
+          <a class="footer__link" href="tel:+351-965-443-443">
             (+351) 965 443 443
           </a>
-          <a class="footer__mail" href="mailto:donna.olinda8@gmail.com">
+          <a class="footer__link" href="mailto:donna.olinda8@gmail.com">
             donna.olinda8@gmail.com
           </a>
         </div>

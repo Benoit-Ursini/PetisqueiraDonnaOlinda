@@ -3,8 +3,9 @@
   flex-direction: column;
   max-width: 65%;
   margin: auto;
-  padding: 32px;
+  padding-bottom: 32px;
   border-radius: 3px;
+  text-align: start;
 
   &__identity {
     display: flex;
@@ -19,11 +20,14 @@
     }
   }
 
-  &__custinput {
+  &__inputs {
     padding: 15px;
     border-radius: 3px;
-    border: solid 2px $color-logo;
-    background-color: $color-section;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 1.25em;
+    border: 0;
+    background: $color-section;
+    outline: none;
 
     &:focus {
       background-color: $color-logo;
@@ -31,32 +35,28 @@
     }
   }
 
-  &__label {
-    margin-bottom: 10px;
-    color: $color-title;
-  }
-
   &__button {
-    width: 200px;
     margin: auto;
     margin-top: 30px;
     background-color: $color-logo;
     color: $color-section;
+    font-family: "Nova Round", sans-serif;
+    font-size: 1.5em;
     display: inline-block;
-    border-radius: 3px;
-    padding: 20px 30px;
+    border-radius: 30px;
+    padding: 20px 50px;
+    border: 0;
+    outline: none;
 
     &:hover {
       background-color: $color-section;
-      border: solid 2px $color-logo;
       color: $color-logo;
     }
   }
 }
 
-.contact {
-  &__text {
-    text-align: center;
-    padding: 32px;
-  }
+.contact__text {
+  margin-bottom: 32px;
+  color: $color-highlight;
+  font-size: 1.25em;
 }

@@ -1,5 +1,6 @@
 footer {
   background-color: $color-logo;
+  color: $color-section;
 }
 
 .footer {
@@ -10,10 +11,10 @@ footer {
   padding-bottom: 16px;
   text-align: center;
   position: relative;
-  color: $color-section;
 
   &__heading {
     color: $color-section;
+    font-size: 2em;
   }
 
   &__logo {
@@ -21,6 +22,15 @@ footer {
     height: 140px;
     object-fit: cover;
     margin-bottom: 16px;
+  }
+
+  &__link {
+    color: $color-section;
+    padding-top: 8px;
+
+    &:hover {
+      color: $color-highlight;
+    }
   }
 
   &__social--image {

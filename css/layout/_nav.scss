@@ -7,7 +7,7 @@
 
   &__img {
     width: 240px;
-    height: 140px;
+    height: 138px;
     object-fit: cover;
   }
 
@@ -24,7 +24,6 @@
       position: relative;
       font-size: 24px;
       margin: 40px;
-      text-transform: uppercase;
       color: $color-title;
 
       &:hover:after {

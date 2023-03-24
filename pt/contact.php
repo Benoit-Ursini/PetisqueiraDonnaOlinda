@@ -1,21 +1,14 @@
-<!DOCTYPE html>
+<?php
+session_start();
+?><!DOCTYPE html>
 <html lang="pt">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="" />
-    <title>Petisqueira Donna Olinda - Avaliações</title>
+    <title>Petisqueira Donna Olinda</title>
     <link rel="shortcut icon" href="../images/logo.jpg" />
     <link rel="stylesheet" href="../styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nova+Round&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.cdnfonts.com/css/trebuchet-ms-2"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.cdnfonts.com/css/ink-free" rel="stylesheet" />
   </head>
 
   <body>
@@ -46,7 +39,7 @@
             Linguas
             <ul class="language__list">
               <li>
-                <a class="language__list--item" href="./opinion.html">
+                <a class="language__list--item" href="./contact.html">
                   <img
                     class="language__list--flag"
                     src="../images/flags/portugal.png"
@@ -56,7 +49,7 @@
                 </a>
               </li>
               <li>
-                <a class="language__list--item" href="../en/opinion.html">
+                <a class="language__list--item" href="../en/contact.html">
                   <img
                     class="language__list--flag"
                     src="../images/flags/uk.png"
@@ -66,7 +59,7 @@
                 </a>
               </li>
               <li>
-                <a class="language__list--item" href="../fr/opinion.html">
+                <a class="language__list--item" href="../fr/contact.html">
                   <img
                     class="language__list--flag"
                     src="../images/flags/france.png"
@@ -76,7 +69,7 @@
                 </a>
               </li>
               <li>
-                <a class="language__list--item" href="../es/opinion.html">
+                <a class="language__list--item" href="../es/contact.html">
                   <img
                     class="language__list--flag"
                     src="../images/flags/spain.png"
@@ -92,9 +85,78 @@
     </header>
 
     <main>
-      <h1>Avaliações de nossos clientes</h1>
-      <section>
-        <p>Exemple</p>
+      <h1>Petisqueira Donna Olinda</h1>
+      <section class="contact">
+        <h2>Uma pergunta ? Contate-nos !</h2>
+
+        <?php if(array_key_exists('errors', $_SESSION)): ?>
+            <div class="error">
+                <?= implode('<br>', $_SESSION['errors']); ?>
+            </div>
+        <?php endif; ?>
+        <?php if(array_key_exists('success', $_SESSION)): ?>
+            <div class="success">
+                Votre email a bien été envoyé
+            </div>
+        <?php endif; ?>
+
+        <form class="form" method="post" action="../post_contact.php">
+          <div class="form__identity">
+            <div class="form__identity--column">
+              <label class="form__label" for="inputname">Nome</label>
+              <input
+                class="form__custinput"
+                type="text"
+                name="name"
+                id="inputname"
+                placeholder="Sérgios Morais"
+                required
+                value="<?= isset($_SESSION['inputs']['name']) ? $_SESSION['inputs']['name'] : ''; ?>"
+              />
+            </div>
+            <div class="form__identity--column">
+              <label class="form__label" for="inputtel">Telefone</label>
+              <input
+                class="form__custinput"
+                type="tel"
+                name="tel"
+                id="inputtel"
+                maxlength="11"
+                placeholder="965 443 443"
+                required
+                value="<?= isset($_SESSION['inputs']['tel']) ? $_SESSION['inputs']['tel'] : ''; ?>"
+              />
+            </div>
+          </div>
+          <div class="form__identity">
+            <div class="form__identity--column">
+              <label class="form__label" for="inputemail">Email</label>
+              <input
+                class="form__custinput"
+                type="email"
+                name="email"
+                id="inputemail"
+                placeholder="exemplo@email.com"
+                required
+                value="<?= isset($_SESSION['inputs']['email']) ? $_SESSION['inputs']['email'] : ''; ?>"
+              />
+            </div>
+          </div>
+          <label class="form__label" for="inputmessage">Mensagem</label>
+          <textarea
+            class="form__custinput"
+            name="message"
+            id="inputmessage"
+            rows="10"
+            placeholder="Sua mensagem ou pedido de reserva ..."
+            required
+          ><?= isset($_SESSION['inputs']['message']) ? $_SESSION['inputs']['message'] : ''; ?></textarea>
+          <button type="submit" class="form__button">Enviar</button>
+        </form>
+        <p class="contact__text">
+          Iremos enviar-lhe uma confirmação de reserva quando tivermos lido a
+          sua mensagem. Obrigado !
+        </p>
       </section>
     </main>
 
@@ -110,10 +172,10 @@
           <h3 class="footer__heading">Restaurante Petisqueira Donna Olinda</h3>
           <p>Rua chefe Antonio Afonso 31 Rc</p>
           <p>8800-636 Tavira</p>
-          <a class="footer__link" href="tel:+351-965-443-443">
+          <a class="footer__number" href="tel:+351-965-443-443">
             (+351) 965 443 443
           </a>
-          <a class="footer__link" href="mailto:donna.olinda8@gmail.com">
+          <a class="footer__mail" href="mailto:donna.olinda8@gmail.com">
             donna.olinda8@gmail.com
           </a>
         </div>
@@ -159,3 +221,9 @@
     </footer>
   </body>
 </html>
+
+<?php
+unset($_SESSION['inputs']);
+unset($_SESSION['success']);
+unset($_SESSION['errors']);
+?>
