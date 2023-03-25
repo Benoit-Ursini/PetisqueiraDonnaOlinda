@@ -35,6 +35,11 @@
     }
   }
 
+  .error {
+    color: #d8000c;
+    background-color: #ffbaba;
+  }
+
   &__button {
     margin: auto;
     margin-top: 30px;
@@ -51,12 +56,13 @@
     &:hover {
       background-color: $color-section;
       color: $color-logo;
+      cursor: pointer;
     }
   }
 }
 
 .contact__text {
   margin-bottom: 32px;
-  color: $color-highlight;
+  color: $color-logo;
   font-size: 1.25em;
 }

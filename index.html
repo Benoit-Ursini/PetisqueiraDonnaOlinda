@@ -20,29 +20,29 @@
 
   <body>
     <header>
-      <img src="./images/header.jpg" alt="Foto do restaurante" />
-      <nav class="menu container--flex-row">
+      <img id="up" src="./images/header.jpg" alt="Foto do restaurante" />
+      <nav class="nav container--flex-row">
         <a href="./index.html">
           <img
-            class="menu__img"
+            class="nav__img"
             src="./images/logo.jpg"
             alt="Logo do restaurante"
           />
         </a>
-        <ul class="menu__list container--flex-row">
-          <li class="menu__list--item">
-            <a class="menu__list--link" href="./index.html">Home</a>
+        <ul class="nav__list container--flex-row">
+          <li class="nav__list--item">
+            <a class="nav__list--link" href="./index.html">Página inicial</a>
           </li>
-          <li class="menu__list--item">
-            <a class="menu__list--link" href="./pt/menus.html">Cardápios</a>
+          <li class="nav__list--item">
+            <a class="nav__list--link" href="./pt/menus.html">Cardápios</a>
           </li>
-          <li class="menu__list--item">
-            <a class="menu__list--link" href="./pt/opinion.html">Avaliações</a>
+          <li class="nav__list--item">
+            <a class="nav__list--link" href="./pt/photos.html">Fotos</a>
           </li>
-          <li class="menu__list--item">
-            <a class="menu__list--link" href="./pt/contact.html">Contactos</a>
+          <li class="nav__list--item">
+            <a class="nav__list--link" href="./pt/contact.html">Contactos</a>
           </li>
-          <li class="menu__list--item language">
+          <li class="nav__list--item language">
             Linguas
             <ul class="language__list">
               <li>
@@ -153,121 +153,93 @@
           </div>
         </div>
       </section>
+
+      <script>
+        function onClick(element) {
+          document.getElementById("img01").src = element.src;
+          document.getElementById("modal01").style.display = "block";
+        }
+      </script>
+
       <section>
         <h2 class="restaurante__heading">Nosso restaurante</h2>
+        <div id="modal01" class="modal" onclick="this.style.display='none'">
+          <span class="close">&times;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+          <div class="modal-content">
+            <img id="img01" style="max-width: 100%" />
+          </div>
+        </div>
         <div class="restaurante">
-          <a
-            class="restaurante__link"
-            href="./images/home/deco1.jpg"
+          <img
             class="restaurante__photo"
-          >
-            <img
-              class="restaurante__photo"
-              src="./images/home/deco1.jpg"
-              alt="Intérieur vins"
-            />
-            <div class="restaurante__photo--hover">Clique para ver</div>
-          </a>
-          <a
-            class="restaurante__link"
-            href="./images/home/deco2.jpg"
-            class="restaurante__photo"
-          >
-            <img
-              class="restaurante__photo"
-              src="./images/home/deco2.jpg"
-              alt="Intérieur comptoir"
-            />
-            <div class="restaurante__photo--hover">Clique para ver</div>
-          </a>
-          <a
-            class="restaurante__link"
-            href="./images/home/deco3.jpg"
-            class="restaurante__photo"
-          >
-            <img
-              class="restaurante__photo"
-              src="./images/home/deco3.jpg"
-              alt="Intérieur entrée"
-            />
-            <div class="restaurante__photo--hover">Clique para ver</div>
-          </a>
+            onclick="onClick(this)"
+            src="./images/home/deco1.jpg"
+            alt="Intérieur vins"
+          />
 
-          <a
-            class="restaurante__link"
-            href="./images/home/ext1.jpg"
+          <img
             class="restaurante__photo"
-          >
-            <img
-              class="restaurante__photo"
-              src="./images/home/ext1.jpg"
-              alt="Terrasse"
-            />
-            <div class="restaurante__photo--hover">Clique para ver</div>
-          </a>
-          <a
-            class="restaurante__link"
-            href="./images/home/ext2.jpg"
-            class="restaurante__photo"
-          >
-            <img
-              class="restaurante__photo"
-              src="./images/home/ext2.jpg"
-              alt="Terrasse"
-            />
-            <div class="restaurante__photo--hover">Clique para ver</div>
-          </a>
-          <a
-            class="restaurante__link"
-            href="./images/home/ext3.jpg"
-            class="restaurante__photo"
-          >
-            <img
-              class="restaurante__photo"
-              src="./images/home/ext3.jpg"
-              alt="Terrasse nuit"
-            />
-            <div class="restaurante__photo--hover">Clique para ver</div>
-          </a>
+            onclick="onClick(this)"
+            src="./images/home/deco2.jpg"
+            alt="Intérieur comptoir"
+          />
 
-          <a
-            class="restaurante__link"
-            href="./images/home/int1.jpg"
+          <img
             class="restaurante__photo"
-          >
-            <img
-              class="restaurante__photo"
-              src="./images/home/int1.jpg"
-              alt="Intérieur tables"
-            />
-            <div class="restaurante__photo--hover">Clique para ver</div>
-          </a>
-          <a
-            class="restaurante__link"
-            href="./images/home/int2.jpg"
+            onclick="onClick(this)"
+            src="./images/home/deco3.jpg"
+            alt="Intérieur entrée"
+          />
+
+          <img
             class="restaurante__photo"
-          >
-            <img
-              class="restaurante__photo"
-              src="./images/home/int2.jpg"
-              alt="Intérieur tables"
-            />
-            <div class="restaurante__photo--hover">Clique para ver</div>
-          </a>
-          <a
-            class="restaurante__link"
-            href="./images/home/int3.jpg"
+            onclick="onClick(this)"
+            src="./images/home/ext1.jpg"
+            alt="Terrasse"
+          />
+
+          <img
             class="restaurante__photo"
-          >
-            <img
-              class="restaurante__photo"
-              src="./images/home/int3.jpg"
-              alt="Intérieur tables"
-            />
-            <div class="restaurante__photo--hover">Clique para ver</div>
-          </a>
+            onclick="onClick(this)"
+            src="./images/home/ext2.jpg"
+            alt="Terrasse"
+          />
+
+          <img
+            class="restaurante__photo"
+            onclick="onClick(this)"
+            src="./images/home/ext3.jpg"
+            alt="Terrasse nuit"
+          />
+
+          <img
+            class="restaurante__photo"
+            onclick="onClick(this)"
+            src="./images/home/int1.jpg"
+            alt="Intérieur tables"
+          />
+
+          <img
+            class="restaurante__photo"
+            onclick="onClick(this)"
+            src="./images/home/int2.jpg"
+            alt="Intérieur tables"
+          />
+
+          <img
+            class="restaurante__photo"
+            onclick="onClick(this)"
+            src="./images/home/int3.jpg"
+            alt="Intérieur tables"
+          />
         </div>
       </section>
+      <a href="#up"
+        ><img
+          class="dishes__arrow--up"
+          src="../images/dishes/arrow-up.svg"
+          alt="Arrow up"
+      /></a>
     </main>
 
     <footer>
@@ -279,7 +251,7 @@
             src="./images/logo.jpg"
             alt="Logo do restaurante"
           />
-          <h3 class="footer__heading">Restaurante Petisqueira Donna Olinda</h3>
+          <h3 class="footer__name">Restaurante Petisqueira Donna Olinda</h3>
           <p>Rua chefe Antonio Afonso 31 Rc</p>
           <p>8800-636 Tavira</p>
           <a class="footer__link" href="tel:+351-965-443-443">

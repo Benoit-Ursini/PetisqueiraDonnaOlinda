@@ -12,6 +12,10 @@
   align-items: center;
 }
 
+@mixin opacity {
+  opacity: 0.6;
+}
+
 @mixin border {
   border: solid 2px black;
 }

@@ -17,6 +17,10 @@ footer {
     font-size: 2em;
   }
 
+  &__name {
+    color: $color-section;
+  }
+
   &__logo {
     width: 240px;
     height: 140px;
@@ -37,7 +41,7 @@ footer {
     width: 64px;
 
     &:hover {
-      opacity: 0.6;
+      @include opacity;
     }
   }
 

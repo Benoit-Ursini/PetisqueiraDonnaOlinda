@@ -23,7 +23,7 @@
     &--image {
       max-height: 350px;
       margin: 0px 64px;
-      box-shadow: 6px 6px 6px $color-title;
+      box-shadow: 6px 6px 6px $color-logo;
     }
   }
 
@@ -89,34 +89,15 @@
     padding-bottom: 0px;
   }
 
-  &__link {
-    position: relative;
-
-    &:hover .restaurante__photo--hover {
-      display: flex;
-    }
-  }
-
   &__photo {
+    cursor: pointer;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 3px;
+    box-shadow: 4px 4px 4px grey;
 
-    &--hover {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 3px;
-      font-size: 1.5em;
-      color: white;
-      background-color: rgba(0, 0, 0, 0.5);
-      display: none;
+    &:hover {
+      @include opacity;
     }
   }
 }

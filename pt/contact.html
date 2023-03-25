@@ -20,29 +20,29 @@
 
   <body>
     <header>
-      <img src="../images/header.jpg" alt="Foto do restaurante" />
-      <nav class="menu container--flex-row">
+      <img id="up" src="../images/header.jpg" alt="Foto do restaurante" />
+      <nav class="nav container--flex-row">
         <a href="../index.html">
           <img
-            class="menu__img"
+            class="nav__img"
             src="../images/logo.jpg"
             alt="Logo do restaurante"
           />
         </a>
-        <ul class="menu__list container--flex-row">
-          <li class="menu__list--item">
-            <a class="menu__list--link" href="../index.html">Home</a>
+        <ul class="nav__list container--flex-row">
+          <li class="nav__list--item">
+            <a class="nav__list--link" href="../index.html">Página inicial</a>
           </li>
-          <li class="menu__list--item">
-            <a class="menu__list--link" href="./menus.html">Cardápios</a>
+          <li class="nav__list--item">
+            <a class="nav__list--link" href="./menus.html">Cardápios</a>
           </li>
-          <li class="menu__list--item">
-            <a class="menu__list--link" href="./opinion.html">Avaliações</a>
+          <li class="nav__list--item">
+            <a class="nav__list--link" href="./photos.html">Fotos</a>
           </li>
-          <li class="menu__list--item">
-            <a class="menu__list--link" href="./contact.html">Contactos</a>
+          <li class="nav__list--item">
+            <a class="nav__list--link" href="./contact.html">Contactos</a>
           </li>
-          <li class="menu__list--item language">
+          <li class="nav__list--item language">
             Linguas
             <ul class="language__list">
               <li>
@@ -100,9 +100,11 @@
               class="form__inputs"
               type="text"
               id="name"
+              minlength="11"
               placeholder="Nome"
               required
             />
+            <span class="error" id="errorname"></span>
           </div>
           <div class="form__identity--column">
             <input
@@ -113,6 +115,7 @@
               placeholder="Telefone"
               required
             />
+            <span class="error" id="errortel"></span>
           </div>
         </div>
         <div class="form__identity">
@@ -124,6 +127,7 @@
               placeholder="exemplo@gmail.com"
               required
             />
+            <span class="error" id="errormail"></span>
           </div>
         </div>
         <textarea
@@ -131,15 +135,27 @@
           name="message"
           id="message"
           rows="8"
+          minlength="10"
+          maxlength="1000"
           placeholder="Sua mensagem"
           required
         ></textarea>
+        <span class="error" id="errormsg"></span>
         <button type="submit" class="form__button">Enviar</button>
       </form>
       <p class="contact__text">
+        Atenção não reserva de meados de junho a meados de setembro. <br />
         Iremos enviar-lhe uma confirmação de reserva quando tivermos lido a sua
-        mensagem. Obrigado !
+        mensagem. <br />
+        Obrigado !
       </p>
+      <a href="#up"
+        ><img
+          class="dishes__arrow--up"
+          src="../images/dishes/arrow-up.svg"
+          alt="Arrow up"
+      /></a>
+
       <script src="https://smtpjs.com/v3/smtp.js"></script>
       <script>
         function sendEmail() {
@@ -172,7 +188,7 @@
             src="../images/logo.jpg"
             alt="Logo do restaurante"
           />
-          <h3 class="footer__heading">Restaurante Petisqueira Donna Olinda</h3>
+          <h3 class="footer__name">Restaurante Petisqueira Donna Olinda</h3>
           <p>Rua chefe Antonio Afonso 31 Rc</p>
           <p>8800-636 Tavira</p>
           <a class="footer__link" href="tel:+351-965-443-443">
