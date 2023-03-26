@@ -3,6 +3,7 @@
   flex-direction: row;
   gap: 32px;
   background-color: $color-background;
+  padding: 0;
 }
 
 .presentation {
@@ -25,6 +26,10 @@
       margin: 0px 64px;
       box-shadow: 6px 6px 6px $color-logo;
     }
+  }
+
+  &__title {
+    margin-top: 24px;
   }
 
   &__text {
@@ -85,8 +90,11 @@
   gap: 24px;
   padding: 24px;
 
-  &__heading {
-    padding-bottom: 0px;
+  &__presentation {
+    line-height: 28px;
+    width: 80%;
+    margin: auto;
+    font-size: 1.125em;
   }
 
   &__photo {

@@ -1,12 +1,34 @@
 .menu {
   flex: 1;
-  margin-bottom: 24px;
+  margin: 24px;
+  border: solid 2px $color-logo;
+  border-radius: 5px;
+  padding: 16px;
+
+  &:hover {
+    @include opacity;
+    cursor: pointer;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+  }
 
   &__img {
     max-width: 200px;
+  }
 
-    &:hover {
-      @include opacity;
+  &__text {
+    padding-top: 24px;
+    line-height: 28px;
+
+    &--presentation {
+      width: 60%;
+      margin: auto;
+      font-size: 20px;
+      padding: 0;
+      padding-top: 24px;
     }
   }
 }
