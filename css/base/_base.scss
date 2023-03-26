@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  // @include border;
 }
 
 a {
@@ -10,8 +11,9 @@ a {
 body {
   background-color: $color-background;
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   text-align: center;
+  color: $color-text;
 }
 
 main {
@@ -20,34 +22,34 @@ main {
 }
 
 section {
-  margin-bottom: 32px;
-  padding: 24px;
+  margin-bottom: 2rem;
+  padding: 2rem;
   background-color: $color-section;
+  border-top: solid 8px $color-logo;
 }
 
 h1,
 h2,
 h3 {
   text-align: center;
-  padding-bottom: 24px;
+  padding-bottom: 1.5rem;
   color: $color-logo;
   font-family: "Nova Round", sans-serif;
 }
 
 h1 {
-  font-size: 2em;
-  padding: 24px;
+  font-size: 2rem;
+  padding: 2rem;
 }
 
 h2 {
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 h3 {
-  font-size: 1.325em;
-  padding: 16px;
+  font-size: 1.325rem;
 }
 
-strong {
-  font-weight: normal;
+p {
+  line-height: 1.5rem;
 }

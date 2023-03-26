@@ -3,7 +3,12 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 250px 250px 250px 250px 250px 250px 250px 250px 250px;
   gap: 64px;
-  padding: 64px;
+  padding: 32px;
+  @media screen and (max-width: $tel) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px;
+    gap: 64px;
+  }
 
   &__photo {
     cursor: pointer;
@@ -23,15 +28,6 @@
     &--link:hover {
       background-color: $color-logo;
       color: $color-section;
-    }
-  }
-
-  &__arrow--up {
-    height: 40px;
-    padding-bottom: 32px;
-
-    &:hover {
-      opacity: 0.6;
     }
   }
 }

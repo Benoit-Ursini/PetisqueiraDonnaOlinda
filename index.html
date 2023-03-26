@@ -26,7 +26,7 @@
         <a href="./index.html">
           <img
             class="nav__img"
-            src="./images/logo.jpg"
+            src="./images/shortcut.jpg"
             alt="Logo do restaurante"
           />
         </a>
@@ -94,8 +94,8 @@
 
     <main>
       <h1>Bem vindo ao restaurante de petisqueiras sem modernices</h1>
-      <section class="informations">
-        <div class="presentation">
+      <div class="informations">
+        <section class="presentation">
           <div class="presentation__container">
             <div class="presentation__blockimg">
               <img
@@ -129,10 +129,10 @@
               </p>
             </div>
           </div>
-        </div>
+        </section>
         <div>
-          <div class="schedule">
-            <h3 class="schedule__heading">Agendar</h3>
+          <section class="schedule">
+            <h3>Agendar</h3>
             <div class="schedule__table">
               <p>2a Feira</p>
               <p>Fechado</p>
@@ -149,8 +149,8 @@
               <p>Domingo</p>
               <p>10:00 até 22:00</p>
             </div>
-          </div>
-          <div class="homecontact">
+          </section>
+          <section class="homecontact">
             <h3>Contacte-nos para reservar</h3>
             <a class="homecontact__phone" href="tel:+351-965-443-443">
               (+351) 965 443 443
@@ -158,9 +158,9 @@
             <p class="homecontact__info">
               Atenção não reserva de meados de junho a meados de setembro
             </p>
-          </div>
+          </section>
         </div>
-      </section>
+      </div>
 
       <script>
         function onClick(element) {
@@ -172,26 +172,26 @@
       <section>
         <h2 class="restaurante__heading">Nosso restaurante</h2>
         <div class="restaurante__presentation">
-          <p>
-            Estamos localizados às margens do Gilão River. O terraço oferece
-            assim uma vista magnífica sobre a água e a ponte de Santiago. Dia e
-            noite, irá apreciar o bom ambiente das nossas mesas. <br />
-            <br />
-            Um extra: o estacionamento fica ao lado do restaurante! <br />
-            <br />
-            Para nos encontrar:
+          <p class="restaurante__presentation--text">
+            Estamos localizados às margens do <strong>Gilão River</strong> que
+            atravessa <strong>Tavira</strong>. O
+            <strong>terraço</strong> oferece assim uma
+            <strong>vista magnífica</strong> sobre a água e a
+            <strong>ponte de Santiago</strong>. Dia e noite, irá apreciar o
+            <strong>bom ambiente</strong> das nossas mesas.
           </p>
-          <p>
+          <p class="restaurante__presentation--text">
+            Um extra: o <strong>parque do estacionamento</strong> fica ao lado
+            do restaurante!
+          </p>
+          <p>Para nos encontrar:</p>
+          <p class="restaurante__presentation--text">
             Vindo da A22 (de Faro ou Espanha), saia na saída "16 TAVIRA", na
             rotunda saia na saída "TAVIRA" na N270. Na rotunda seguinte, saia na
             segunda saída "TAVIRA" (reta), depois na rotunda seguinte vire à
             esquerda em direcção a "bombeiros". Siga a estrada e vire à esquerda
             no cruzamento para ir diretamente ao restaurante ou continue em
             frente para ir ao estacionamento.
-          </p>
-          <p>
-            <br />
-            Consumo no local, Assentos ao ar livre
           </p>
         </div>
         <div id="modal01" class="modal" onclick="this.style.display='none'">
@@ -267,7 +267,7 @@
       </section>
       <a href="#up"
         ><img
-          class="dishes__arrow--up"
+          class="arrow-up"
           src="../images/dishes/arrow-up.svg"
           alt="Arrow up"
       /></a>
@@ -285,12 +285,16 @@
           <h3 class="footer__name">Restaurante Petisqueira Donna Olinda</h3>
           <p>Rua chefe Antonio Afonso 31 Rc</p>
           <p>8800-636 Tavira</p>
-          <a class="footer__link" href="tel:+351-965-443-443">
-            (+351) 965 443 443
-          </a>
-          <a class="footer__link" href="mailto:donna.olinda8@gmail.com">
-            donna.olinda8@gmail.com
-          </a>
+          <p>
+            <a class="footer__link" href="tel:+351-965-443-443">
+              (+351) 965 443 443
+            </a>
+          </p>
+          <p>
+            <a class="footer__link" href="mailto:donna.olinda8@gmail.com">
+              donna.olinda8@gmail.com
+            </a>
+          </p>
         </div>
         <div>
           <iframe
@@ -331,7 +335,7 @@
           />
         </div>
       </div>
-      <p>
+      <p class="footer__copyright">
         Copyright &copy; 2023 Petisqueira Donna Olinda | Todos os Direitos
         Reservados
       </p>

@@ -2,82 +2,85 @@
   display: flex;
   flex-direction: row;
   gap: 32px;
-  background-color: $color-background;
-  padding: 0;
+  @media screen and (max-width: $tel) {
+    flex-direction: column;
+  }
 }
 
 .presentation {
-  background-color: $color-section;
   width: 80%;
-  display: flex;
-  flex-direction: column;
 
   &__container {
     display: flex;
     flex-direction: row;
     height: 100%;
+    @media screen and (max-width: $tel) {
+      flex-direction: column;
+    }
   }
 
   &__blockimg {
     margin: auto;
 
     &--image {
-      max-height: 350px;
-      margin: 0px 64px;
+      max-height: 450px;
       box-shadow: 6px 6px 6px $color-logo;
+      @media screen and (max-width: $tel) {
+        max-height: 250px;
+        margin-bottom: 32px;
+      }
     }
-  }
-
-  &__title {
-    margin-top: 24px;
   }
 
   &__text {
     text-align: justify;
-    margin-right: 64px;
+    margin-left: 32px;
+    @media screen and (max-width: $tel) {
+      margin-left: 0;
+    }
   }
 }
 
 .schedule {
-  border-top: solid 8px $color-logo;
   background-color: $color-section;
-  padding-bottom: 16px;
+  padding-top: 1rem;
 
   &__table {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 0px 8px 8px 8px;
 
-    &--later {
-      color: $color-highlight;
+    & > p {
+      line-height: 2rem;
     }
 
-    & p {
-      padding-top: 8px;
+    &--later {
+      color: $color-logo;
     }
   }
 }
 
 .homecontact {
-  border-top: solid 8px $color-logo;
   text-align: center;
   background-color: $color-section;
-  margin-top: 32px;
+  padding-top: 1rem;
 
   &__phone {
-    display: block;
-    padding: 8px 0px;
-    font-size: 24px;
-    color: $color-highlight;
+    display: inline-block;
+    margin-bottom: 16px;
+    font-size: 1.5rem;
+    background-color: $color-logo;
+    border-radius: 50px;
+    padding: 0.5rem 1rem;
+    color: $color-section;
 
     &:hover {
-      background-color: $color-logo;
-      color: $color-section;
+      background-color: $color-section;
+      color: $color-logo;
+      outline: solid 2px $color-logo;
     }
   }
 
   &__info {
-    padding: 16px;
     font-family: Arial, Helvetica, sans-serif;
     font-style: italic;
   }
@@ -89,12 +92,22 @@
   grid-template-rows: 300px 300px 300px;
   gap: 24px;
   padding: 24px;
+  @media screen and (max-width: $tel) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 300px 300px 300px 300px 300px 300px 300px 300px 300px;
+  }
 
   &__presentation {
-    line-height: 28px;
-    width: 80%;
+    width: 60%;
     margin: auto;
-    font-size: 1.125em;
+    @media screen and (max-width: $tel) {
+      width: 100%;
+    }
+
+    &--text {
+      margin-bottom: 1.5rem;
+      text-align: justify;
+    }
   }
 
   &__photo {

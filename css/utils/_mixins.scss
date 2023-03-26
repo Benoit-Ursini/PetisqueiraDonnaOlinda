@@ -1,17 +1,3 @@
-@mixin flex-row($justify: center) {
-  display: flex;
-  flex-direction: row;
-  justify-content: $justify;
-  align-items: center;
-}
-
-@mixin flex-column($justify: center) {
-  display: flex;
-  flex-direction: column;
-  justify-content: $justify;
-  align-items: center;
-}
-
 @mixin opacity {
   opacity: 0.6;
 }

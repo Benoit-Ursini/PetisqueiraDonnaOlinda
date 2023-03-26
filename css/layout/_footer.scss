@@ -1,3 +1,12 @@
+.arrow-up {
+  height: 40px;
+  padding-bottom: 2rem;
+
+  &:hover {
+    @include opacity;
+  }
+}
+
 footer {
   background-color: $color-logo;
   color: $color-section;
@@ -8,14 +17,17 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 350px;
-  gap: 16px;
   padding-bottom: 16px;
   text-align: center;
-  position: relative;
+  @media screen and (max-width: $tel) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 350px 350px 350px;
+    gap: 32px;
+  }
 
   &__heading {
     color: $color-section;
-    font-size: 2em;
+    font-size: 2rem;
   }
 
   &__name {
@@ -26,15 +38,14 @@ footer {
     width: 240px;
     height: 140px;
     object-fit: cover;
-    margin-bottom: 16px;
+    margin-bottom: 1.5rem;
   }
 
   &__link {
     color: $color-section;
-    padding-top: 8px;
 
     &:hover {
-      color: $color-highlight;
+      color: $color-background;
     }
   }
 
@@ -51,6 +62,13 @@ footer {
   }
 
   &--container {
-    @include flex-row(space-evenly);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  &__copyright {
+    font-size: 0.8rem;
   }
 }

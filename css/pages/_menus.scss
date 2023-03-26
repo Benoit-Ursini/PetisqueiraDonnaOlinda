@@ -1,9 +1,5 @@
 .menu {
   flex: 1;
-  margin: 24px;
-  border: solid 2px $color-logo;
-  border-radius: 5px;
-  padding: 16px;
 
   &:hover {
     @include opacity;
@@ -13,6 +9,11 @@
   &__container {
     display: flex;
     flex-direction: row;
+    gap: 32px;
+    @media screen and (max-width: $tel) {
+      flex-direction: column;
+      gap: 0;
+    }
   }
 
   &__img {
@@ -20,15 +21,17 @@
   }
 
   &__text {
-    padding-top: 24px;
     line-height: 28px;
+    color: $color-text;
 
     &--presentation {
       width: 60%;
       margin: auto;
       font-size: 20px;
-      padding: 0;
-      padding-top: 24px;
+      text-align: justify;
+      @media screen and (max-width: $tel) {
+        width: 100%;
+      }
     }
   }
 }

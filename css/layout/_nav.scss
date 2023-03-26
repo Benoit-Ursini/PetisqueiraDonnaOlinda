@@ -1,14 +1,15 @@
 .nav {
   background-color: $color-section;
   width: 100%;
-  height: 144px;
+  height: 100px;
   border-top: 3px solid $color-logo;
   border-bottom: 3px solid $color-logo;
 
   &__img {
-    width: 240px;
-    height: 138px;
+    display: block;
+    height: 100px;
     object-fit: cover;
+    margin-right: 40px;
   }
 
   &__img:hover {
@@ -22,7 +23,7 @@
 
     &--item {
       position: relative;
-      font-size: 24px;
+      font-size: 1.5rem;
       margin: 40px;
       color: $color-logo;
 
@@ -80,14 +81,14 @@
   }
 
   &--flag {
-    height: 1.2em;
-    padding-left: 4px;
+    height: 1.5rem;
+    margin-left: 4px;
   }
 
   &--link {
     display: block;
-    padding: 10px 10px;
+    margin: 10px 10px;
     color: $color-logo;
-    font-size: 0.8em;
+    font-size: 1.1rem;
   }
 }

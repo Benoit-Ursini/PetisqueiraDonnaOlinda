@@ -26,7 +26,7 @@
         <a href="../index.html">
           <img
             class="nav__img"
-            src="../images/logo.jpg"
+            src="../images/shortcut.jpg"
             alt="Logo do restaurante"
           />
         </a>
@@ -94,75 +94,76 @@
 
     <main>
       <h1>Uma pergunta?</h1>
-      <section>
-        <h2>Nosso restaurante</h2>
-        <div class="container--flex-row-start">
-          <div class="contact container--flex-column">
-            <h3>Endereço</h3>
-            <p>Restaurante Petisqueira Donna Olinda</p>
-            <p>Rua chefe Antonio Afonso 31 Rc</p>
-            <p>8800-636 Tavira</p>
+      <div class="menu__container">
+        <section class="contact container--flex-column">
+          <h2>Endereço</h2>
+          <p>Restaurante Petisqueira Donna Olinda</p>
+          <p>Rua chefe Antonio Afonso 31 Rc</p>
+          <p>8800-636 Tavira</p>
+          <p>
             <a class="contact__link" href="tel:+351-965-443-443">
               (+351) 965 443 443
             </a>
+          </p>
+          <p>
             <a class="contact__link" href="mailto:donna.olinda8@gmail.com">
               donna.olinda8@gmail.com
             </a>
-            <div class="footer--container contact__media">
-              <a
-                href="https://www.facebook.com/petisqueiradonnaolinda/?locale=pt_BR"
-                target="_blank"
-              >
-                <img
-                  class="footer__social--image"
-                  src="../images/footer/facebook-black.svg"
-                  alt="Logo Facebook"
-                />
-              </a>
-              <a
-                href="https://www.instagram.com/petisqueiradonnaolinda/?hl=fr"
-                target="_blank"
-              >
-                <img
-                  class="footer__social--image"
-                  src="../images/footer/instagram-black.svg"
-                  alt="Logo instagram"
-                />
-              </a>
-            </div>
+          </p>
+          <div class="footer--container contact__media">
+            <a
+              href="https://www.facebook.com/petisqueiradonnaolinda/?locale=pt_BR"
+              target="_blank"
+            >
+              <img
+                class="footer__social--image"
+                src="../images/footer/facebook-black.svg"
+                alt="Logo Facebook"
+              />
+            </a>
+            <a
+              href="https://www.instagram.com/petisqueiradonnaolinda/?hl=fr"
+              target="_blank"
+            >
+              <img
+                class="footer__social--image"
+                src="../images/footer/instagram-black.svg"
+                alt="Logo instagram"
+              />
+            </a>
           </div>
-          <div class="contact">
-            <h3>Ache-nos!</h3>
-            <p>
-              Vindo da A22 (de Faro ou Espanha), saia na saída "16 TAVIRA", na
-              rotunda saia na saída "TAVIRA" na N270. Na rotunda seguinte, saia
-              na segunda saída "TAVIRA" (reta), depois na rotunda seguinte vire
-              à esquerda em direcção a "bombeiros". Siga a estrada e vire à
-              esquerda no cruzamento para ir diretamente ao restaurante ou
-              continue em frente para ir ao estacionamento.
-            </p>
+        </section>
+        <section class="contact">
+          <h2>Ache-nos!</h2>
+          <p class="contact__itineraire">
+            Vindo da A22 (de Faro ou Espanha), saia na saída "16 TAVIRA", na
+            rotunda saia na saída "TAVIRA" na N270. Na rotunda seguinte, saia na
+            segunda saída "TAVIRA" (reta), depois na rotunda seguinte vire à
+            esquerda em direcção a "bombeiros". Siga a estrada e vire à esquerda
+            no cruzamento para ir diretamente ao restaurante ou continue em
+            frente para ir ao estacionamento.
+          </p>
+        </section>
+        <section class="contact">
+          <h2 class="schedule__heading">Agendar</h2>
+          <div class="schedule__table">
+            <p>2a Feira</p>
+            <p>Fechado</p>
+            <p>3a Feira</p>
+            <p>10:00 até 22:00</p>
+            <p>4a Feira</p>
+            <p>10:00 até 22:00</p>
+            <p>5a Feira</p>
+            <p>10:00 até 22:00</p>
+            <p class="schedule__table--later">6a Feira</p>
+            <p class="schedule__table--later">10:00 até 22:30</p>
+            <p class="schedule__table--later">Sábado</p>
+            <p class="schedule__table--later">10:00 até 22:30</p>
+            <p>Domingo</p>
+            <p>10:00 até 22:00</p>
           </div>
-          <div class="contact">
-            <h3 class="schedule__heading">Agendar</h3>
-            <div class="schedule__table">
-              <p>2a Feira</p>
-              <p>Fechado</p>
-              <p>3a Feira</p>
-              <p>10:00 até 22:00</p>
-              <p>4a Feira</p>
-              <p>10:00 até 22:00</p>
-              <p>5a Feira</p>
-              <p>10:00 até 22:00</p>
-              <p class="schedule__table--later">6a Feira</p>
-              <p class="schedule__table--later">10:00 até 22:30</p>
-              <p class="schedule__table--later">Sábado</p>
-              <p class="schedule__table--later">10:00 até 22:30</p>
-              <p>Domingo</p>
-              <p>10:00 até 22:00</p>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
       <h2>Contacte-nos!</h2>
       <form class="form" onsubmit="sendEmail(); reset(); return false;">
         <div class="form__identity">
@@ -222,7 +223,7 @@
       </p>
       <a href="#up"
         ><img
-          class="dishes__arrow--up"
+          class="arrow-up"
           src="../images/dishes/arrow-up.svg"
           alt="Arrow up"
       /></a>
@@ -259,12 +260,16 @@
           <h3 class="footer__name">Restaurante Petisqueira Donna Olinda</h3>
           <p>Rua chefe Antonio Afonso 31 Rc</p>
           <p>8800-636 Tavira</p>
-          <a class="footer__link" href="tel:+351-965-443-443">
-            (+351) 965 443 443
-          </a>
-          <a class="footer__link" href="mailto:donna.olinda8@gmail.com">
-            donna.olinda8@gmail.com
-          </a>
+          <p>
+            <a class="footer__link" href="tel:+351-965-443-443">
+              (+351) 965 443 443
+            </a>
+          </p>
+          <p>
+            <a class="footer__link" href="mailto:donna.olinda8@gmail.com">
+              donna.olinda8@gmail.com
+            </a>
+          </p>
         </div>
         <div>
           <iframe
@@ -305,7 +310,7 @@
           />
         </div>
       </div>
-      <p>
+      <p class="footer__copyright">
         Copyright &copy; 2023 Petisqueira Donna Olinda | Todos os Direitos
         Reservados
       </p>
