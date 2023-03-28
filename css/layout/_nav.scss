@@ -26,8 +26,10 @@
 
   &__list {
     width: 100%;
+    height: 100%;
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
 
     &--item {
       position: relative;
@@ -41,10 +43,6 @@
         left: 0;
         background-color: $color-logo;
       }
-
-      &:hover .language__list {
-        display: block;
-      }
     }
 
     &--link {
@@ -56,50 +54,39 @@
 }
 
 .language {
-  position: relative;
-
-  &:hover:after {
-    display: none;
-  }
   &__list {
-    position: absolute;
-    text-align: left;
-    background-color: $color-section;
-    border: solid 1px $color-logo;
-    border-left: solid 3px $color-logo;
-    display: none;
+    display: flex;
 
-    &--item {
+    &--link {
       display: flex;
-      flex-direction: row;
       align-items: center;
+      margin: 0 0.5rem;
+      position: relative;
 
       &:hover {
-        background-color: $color-logo;
+        @include opacity;
+      }
 
-        & .language__list--link {
-          color: $color-section;
-        }
+      &:hover:after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 3px;
+        top: 100%;
+        left: 0;
+        background-color: $color-logo;
       }
     }
 
     &--flag {
-      height: 1.5rem;
-      margin-left: 4px;
-    }
-
-    &--link {
-      display: block;
-      margin: 10px 10px;
-      color: $color-logo;
-      font-size: 1.1rem;
+      height: 2rem;
     }
   }
 }
 
-@media all and (max-width: $tel) {
+@media all and (max-width: $responsive) {
   .header {
-    position: fixed;
+    position: absolute;
     width: 100%;
     height: 8vh;
     top: 0;
@@ -108,6 +95,8 @@
     justify-content: space-between;
     align-items: center;
     background-color: $color-section;
+    padding: 0 2rem;
+    box-sizing: border-box;
 
     &__logo {
       position: relative;
@@ -147,10 +136,6 @@
 
       &--item {
         margin: 30px;
-
-        &:hover:after {
-          display: none;
-        }
       }
 
       &--link {
@@ -161,29 +146,14 @@
 
   .language {
     &__list {
-      display: block;
-      width: 100%;
-      border: 0;
+      margin: 32px;
 
-      &--item {
-        justify-content: center;
-        margin: 32px;
-
-        &:hover {
-          background-color: $color-section;
-
-          & .language__list--link {
-            color: $color-logo;
-          }
-        }
+      &--link {
+        margin: 0 1rem;
       }
 
       &--flag {
-        height: 2rem;
-      }
-
-      &--link {
-        font-size: 1.5rem;
+        height: 3rem;
       }
     }
   }

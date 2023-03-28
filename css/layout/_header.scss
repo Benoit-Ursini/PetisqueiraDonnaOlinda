@@ -4,7 +4,7 @@
   object-fit: cover;
   margin-bottom: -4px;
 
-  @media screen and (max-width: $tel) {
+  @media screen and (max-width: $responsive) {
     border-bottom: solid 3px $color-logo;
   }
 }

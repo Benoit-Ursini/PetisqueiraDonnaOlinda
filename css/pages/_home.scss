@@ -2,19 +2,22 @@
   display: flex;
   flex-direction: row;
   gap: 32px;
-  @media screen and (max-width: $tel) {
+  @media screen and (max-width: $responsive) {
     flex-direction: column;
+    gap: 0;
   }
 }
 
 .presentation {
-  width: 80%;
+  @media screen and (min-width: $responsive) {
+    width: 80%;
+  }
 
   &__container {
     display: flex;
     flex-direction: row;
     height: 100%;
-    @media screen and (max-width: $tel) {
+    @media screen and (max-width: $responsive) {
       flex-direction: column;
     }
   }
@@ -25,7 +28,7 @@
     &--image {
       max-height: 450px;
       box-shadow: 6px 6px 6px $color-logo;
-      @media screen and (max-width: $tel) {
+      @media screen and (max-width: $responsive) {
         max-height: 250px;
         margin-bottom: 32px;
       }
@@ -33,8 +36,9 @@
   }
 
   &__text {
+    margin: auto;
     margin-left: 32px;
-    @media screen and (max-width: $tel) {
+    @media screen and (max-width: $responsive) {
       margin-left: 0;
     }
 
@@ -96,7 +100,13 @@
   grid-template-rows: 300px 300px 300px;
   gap: 24px;
   padding: 24px;
-  @media screen and (max-width: $tel) {
+
+  @media screen and (max-width: $responsive) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 300px 300px 300px 300px 300px;
+  }
+
+  @media screen and (max-width: $responsive-tel) {
     grid-template-columns: 1fr;
     grid-template-rows: 300px 300px 300px 300px 300px 300px 300px 300px 300px;
   }

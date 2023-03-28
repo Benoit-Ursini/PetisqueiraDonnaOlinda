@@ -2,6 +2,6 @@
   opacity: 0.6;
 }
 
-@mixin border {
-  border: solid 2px black;
+@mixin border($color: black) {
+  border: solid 2px $color;
 }
