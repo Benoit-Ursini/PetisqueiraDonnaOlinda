@@ -1,9 +1,10 @@
-#up {
+.img-bkgd {
   width: 100%;
   height: 400px;
   object-fit: cover;
   margin-bottom: -4px;
-  @media (max-width: $tel) {
-    display: none;
+
+  @media screen and (max-width: $tel) {
+    border-bottom: solid 3px $color-logo;
   }
 }

@@ -7,6 +7,13 @@
     <meta name="robots" content="index,follow" />
     <link rel="shortcut icon" href="./images/shortcut.jpg" />
     <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,7 +28,37 @@
 
   <body>
     <header>
-      <img id="up" src="./images/header.jpg" alt="Foto do restaurante" />
+      <img
+        id="up"
+        class="img-bkgd"
+        src="./images/header.jpg"
+        alt="Foto do restaurante"
+      />
+
+      <div id="up" class="header">
+        <a href="./index.html">
+          <img
+            class="header__logo"
+            src="./images/shortcut.jpg"
+            alt="Logo do restaurante"
+          />
+        </a>
+
+        <div class="toggle">
+          <i class="fas fa-bars ouvrir"></i>
+          <i id="fermer" class="fas fa-times fermer"></i>
+        </div>
+      </div>
+
+      <script>
+        let toggle = document.querySelector(".toggle");
+        let body = document.querySelector("body");
+
+        toggle.addEventListener("click", function () {
+          body.classList.toggle("open");
+        });
+      </script>
+
       <nav class="nav container--flex-row">
         <a href="./index.html">
           <img
@@ -30,7 +67,8 @@
             alt="Logo do restaurante"
           />
         </a>
-        <ul class="nav__list container--flex-row">
+
+        <ul class="nav__list">
           <li class="nav__list--item">
             <a class="nav__list--link" href="./index.html">Página inicial</a>
           </li>
@@ -43,7 +81,8 @@
           <li class="nav__list--item">
             <a class="nav__list--link" href="./pt/contact.html">Contactos</a>
           </li>
-          <li class="nav__list--item language">
+
+          <li class="nav__list--item nav__list--link language">
             Linguas
             <ul class="language__list">
               <li>

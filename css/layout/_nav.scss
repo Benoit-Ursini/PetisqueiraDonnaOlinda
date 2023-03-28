@@ -1,31 +1,36 @@
+.header {
+  &__logo {
+    display: none;
+  }
+}
+
+.toggle {
+  display: none;
+}
+
 .nav {
   background-color: $color-section;
-  width: 100%;
   height: 100px;
-  border-top: 3px solid $color-logo;
-  border-bottom: 3px solid $color-logo;
+  border-top: solid 3px $color-logo;
+  border-bottom: solid 3px $color-logo;
 
   &__img {
     display: block;
-    height: 100px;
-    object-fit: cover;
-    margin-right: 40px;
-  }
+    max-height: 100px;
+    margin-left: 32px;
 
-  &__img:hover {
-    @include opacity;
+    &:hover {
+      @include opacity;
+    }
   }
 
   &__list {
+    width: 100%;
     display: flex;
-    list-style: none;
-    text-align: center;
+    justify-content: space-evenly;
 
     &--item {
       position: relative;
-      font-size: 1.5rem;
-      margin: 40px;
-      color: $color-logo;
 
       &:hover:after {
         position: absolute;
@@ -37,58 +42,169 @@
         background-color: $color-logo;
       }
 
-      &.language {
-        position: relative;
+      &:hover .language__list {
+        display: block;
+      }
+    }
+
+    &--link {
+      display: block;
+      color: $color-logo;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.language {
+  position: relative;
+
+  &:hover:after {
+    display: none;
+  }
+  &__list {
+    position: absolute;
+    text-align: left;
+    background-color: $color-section;
+    border: solid 1px $color-logo;
+    border-left: solid 3px $color-logo;
+    display: none;
+
+    &--item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      &:hover {
+        background-color: $color-logo;
+
+        & .language__list--link {
+          color: $color-section;
+        }
+      }
+    }
+
+    &--flag {
+      height: 1.5rem;
+      margin-left: 4px;
+    }
+
+    &--link {
+      display: block;
+      margin: 10px 10px;
+      color: $color-logo;
+      font-size: 1.1rem;
+    }
+  }
+}
+
+@media all and (max-width: $tel) {
+  .header {
+    position: fixed;
+    width: 100%;
+    height: 8vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $color-section;
+
+    &__logo {
+      position: relative;
+      display: block;
+      max-height: 8vh;
+      z-index: 20;
+    }
+  }
+
+  .toggle {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+    position: relative;
+    z-index: 20;
+  }
+
+  .nav {
+    position: absolute;
+    top: 8vh;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $color-section;
+    transform: translateX(-100%);
+    transition: transform 1s;
+
+    &__img {
+      display: none;
+    }
+
+    &__list {
+      width: 100%;
+      height: 100vh;
+      flex-direction: column;
+      justify-content: flex-start;
+
+      &--item {
+        margin: 30px;
 
         &:hover:after {
           display: none;
         }
       }
-    }
 
-    &--link {
-      color: $color-logo;
-    }
-
-    &--item:hover .language__list {
-      display: block;
-    }
-  }
-}
-
-.language__list {
-  position: absolute;
-  list-style: none;
-  text-align: left;
-  background-color: $color-section;
-  display: none;
-  border: solid 1px $color-logo;
-  border-left: solid 3px $color-logo;
-
-  &--item {
-    text-transform: none;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
-    &:hover {
-      background-color: $color-logo;
-
-      & .language__list--link {
-        color: $color-section;
+      &--link {
+        font-size: 2rem;
       }
     }
   }
 
-  &--flag {
-    height: 1.5rem;
-    margin-left: 4px;
+  .language {
+    &__list {
+      display: block;
+      width: 100%;
+      border: 0;
+
+      &--item {
+        justify-content: center;
+        margin: 32px;
+
+        &:hover {
+          background-color: $color-section;
+
+          & .language__list--link {
+            color: $color-logo;
+          }
+        }
+      }
+
+      &--flag {
+        height: 2rem;
+      }
+
+      &--link {
+        font-size: 1.5rem;
+      }
+    }
   }
 
-  &--link {
+  .ouvrir {
     display: block;
-    margin: 10px 10px;
-    color: $color-logo;
-    font-size: 1.1rem;
+  }
+
+  #fermer {
+    display: none;
+  }
+
+  .open .ouvrir {
+    display: none;
+  }
+
+  .open #fermer {
+    display: block;
+  }
+
+  .open .nav {
+    transform: translateX(0);
   }
 }
