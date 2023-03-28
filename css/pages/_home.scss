@@ -33,10 +33,14 @@
   }
 
   &__text {
-    text-align: justify;
     margin-left: 32px;
     @media screen and (max-width: $tel) {
       margin-left: 0;
+    }
+
+    &--p {
+      margin-bottom: 1.5rem;
+      text-align: justify;
     }
   }
 }
@@ -95,19 +99,6 @@
   @media screen and (max-width: $tel) {
     grid-template-columns: 1fr;
     grid-template-rows: 300px 300px 300px 300px 300px 300px 300px 300px 300px;
-  }
-
-  &__presentation {
-    width: 60%;
-    margin: auto;
-    @media screen and (max-width: $tel) {
-      width: 100%;
-    }
-
-    &--text {
-      margin-bottom: 1.5rem;
-      text-align: justify;
-    }
   }
 
   &__photo {
